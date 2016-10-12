@@ -25,10 +25,15 @@ namespace Cash_Register
         int pep_pizza;
         int cheese_pizza;
         int ca_pizza;
+        double tax;
+        double tendered;
 
         public cashRegister()
         {
             InitializeComponent();
+
+            reciept.Visible = false;
+
         }
 
         private void calculateSubtotal_Click(object sender, EventArgs e)
@@ -48,6 +53,13 @@ namespace Cash_Register
 
                 subtotalOutput.Text = subtotal.ToString("C");
 
+                total = subtotal * TAX;
+                totalOutput.Text = total.ToString("C");
+
+                tax = total - subtotal;
+                taxOutput.Text = tax.ToString("C");
+
+
             }
 
 
@@ -59,15 +71,41 @@ namespace Cash_Register
                  
         }
 
-        private void totalButton_Click(object sender, EventArgs e)
-        {
-            total = subtotal * TAX;
-            totalOutput.Text = total.ToString("C");
-
-        }
 
         private void changeButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                tendered = Convert.ToInt16(amountInput.Text);
+                change = tendered - total;
+
+                changeOutput.Text = change.ToString("C");
+
+                if (tendered < total)
+                {
+                    changeOutput.Text = "HEY! PAY UP!";
+
+                }
+
+            }
+
+            catch
+            {
+
+                changeOutput.Text = "Hey Buddy, you think im running this for free?!";
+
+            }
+
+
+
+        }
+
+        private void printReciept_Click(object sender, EventArgs e)
+        {
+            reciept.Visible = true;
+
+            reciept.Text = "Joe's Pizza Depot";
+            reciept.Text = "/";
 
         }
     }
