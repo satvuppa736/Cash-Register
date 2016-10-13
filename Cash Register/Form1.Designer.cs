@@ -57,10 +57,11 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.titleLabel.Location = new System.Drawing.Point(8, 9);
+            this.titleLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.titleLabel.Location = new System.Drawing.Point(11, 11);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(316, 50);
+            this.titleLabel.Size = new System.Drawing.Size(402, 63);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Joe\'s Pizza Depot";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,9 +70,10 @@
             // 
             this.pizzaLabel1.AutoSize = true;
             this.pizzaLabel1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pizzaLabel1.Location = new System.Drawing.Point(12, 72);
+            this.pizzaLabel1.Location = new System.Drawing.Point(16, 89);
+            this.pizzaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pizzaLabel1.Name = "pizzaLabel1";
-            this.pizzaLabel1.Size = new System.Drawing.Size(190, 26);
+            this.pizzaLabel1.Size = new System.Drawing.Size(237, 32);
             this.pizzaLabel1.TabIndex = 1;
             this.pizzaLabel1.Text = "PEPPERONI PIZZA";
             // 
@@ -79,9 +81,10 @@
             // 
             this.cheesePizza.AutoSize = true;
             this.cheesePizza.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cheesePizza.Location = new System.Drawing.Point(12, 119);
+            this.cheesePizza.Location = new System.Drawing.Point(16, 146);
+            this.cheesePizza.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cheesePizza.Name = "cheesePizza";
-            this.cheesePizza.Size = new System.Drawing.Size(155, 26);
+            this.cheesePizza.Size = new System.Drawing.Size(193, 32);
             this.cheesePizza.TabIndex = 2;
             this.cheesePizza.Text = "CHEESE PIZZA";
             // 
@@ -89,9 +92,10 @@
             // 
             this.canadianPizza.AutoSize = true;
             this.canadianPizza.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.canadianPizza.Location = new System.Drawing.Point(12, 167);
+            this.canadianPizza.Location = new System.Drawing.Point(16, 206);
+            this.canadianPizza.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.canadianPizza.Name = "canadianPizza";
-            this.canadianPizza.Size = new System.Drawing.Size(191, 26);
+            this.canadianPizza.Size = new System.Drawing.Size(239, 32);
             this.canadianPizza.TabIndex = 3;
             this.canadianPizza.Text = "CANADIAN PIZZA";
             // 
@@ -99,9 +103,10 @@
             // 
             this.subtotalLabel.AutoSize = true;
             this.subtotalLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalLabel.Location = new System.Drawing.Point(12, 291);
+            this.subtotalLabel.Location = new System.Drawing.Point(16, 358);
+            this.subtotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalLabel.Name = "subtotalLabel";
-            this.subtotalLabel.Size = new System.Drawing.Size(120, 26);
+            this.subtotalLabel.Size = new System.Drawing.Size(149, 32);
             this.subtotalLabel.TabIndex = 4;
             this.subtotalLabel.Text = "SUBTOTAL";
             // 
@@ -111,9 +116,10 @@
             this.calculateSubtotal.FlatAppearance.BorderSize = 2;
             this.calculateSubtotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculateSubtotal.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateSubtotal.Location = new System.Drawing.Point(228, 223);
+            this.calculateSubtotal.Location = new System.Drawing.Point(304, 274);
+            this.calculateSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calculateSubtotal.Name = "calculateSubtotal";
-            this.calculateSubtotal.Size = new System.Drawing.Size(162, 36);
+            this.calculateSubtotal.Size = new System.Drawing.Size(216, 44);
             this.calculateSubtotal.TabIndex = 5;
             this.calculateSubtotal.Text = "Calculate Total";
             this.calculateSubtotal.UseVisualStyleBackColor = true;
@@ -123,39 +129,43 @@
             // 
             this.totalText.AutoSize = true;
             this.totalText.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalText.Location = new System.Drawing.Point(12, 406);
+            this.totalText.Location = new System.Drawing.Point(16, 500);
+            this.totalText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalText.Name = "totalText";
-            this.totalText.Size = new System.Drawing.Size(80, 26);
+            this.totalText.Size = new System.Drawing.Size(99, 32);
             this.totalText.TabIndex = 7;
             this.totalText.Text = "TOTAL";
             // 
             // canadianInput
             // 
             this.canadianInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.canadianInput.Location = new System.Drawing.Point(228, 167);
+            this.canadianInput.Location = new System.Drawing.Point(304, 206);
+            this.canadianInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.canadianInput.Multiline = true;
             this.canadianInput.Name = "canadianInput";
-            this.canadianInput.Size = new System.Drawing.Size(162, 26);
+            this.canadianInput.Size = new System.Drawing.Size(215, 31);
             this.canadianInput.TabIndex = 8;
             this.canadianInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pepInput
             // 
             this.pepInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pepInput.Location = new System.Drawing.Point(228, 72);
+            this.pepInput.Location = new System.Drawing.Point(304, 89);
+            this.pepInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pepInput.Multiline = true;
             this.pepInput.Name = "pepInput";
-            this.pepInput.Size = new System.Drawing.Size(162, 26);
+            this.pepInput.Size = new System.Drawing.Size(215, 31);
             this.pepInput.TabIndex = 9;
             this.pepInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cheeseInput
             // 
             this.cheeseInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.cheeseInput.Location = new System.Drawing.Point(228, 119);
+            this.cheeseInput.Location = new System.Drawing.Point(304, 146);
+            this.cheeseInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cheeseInput.Multiline = true;
             this.cheeseInput.Name = "cheeseInput";
-            this.cheeseInput.Size = new System.Drawing.Size(162, 26);
+            this.cheeseInput.Size = new System.Drawing.Size(215, 31);
             this.cheeseInput.TabIndex = 10;
             this.cheeseInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -163,37 +173,41 @@
             // 
             this.subtotalOutput.AutoSize = true;
             this.subtotalOutput.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalOutput.Location = new System.Drawing.Point(223, 291);
+            this.subtotalOutput.Location = new System.Drawing.Point(297, 358);
+            this.subtotalOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.subtotalOutput.Name = "subtotalOutput";
-            this.subtotalOutput.Size = new System.Drawing.Size(0, 26);
+            this.subtotalOutput.Size = new System.Drawing.Size(0, 32);
             this.subtotalOutput.TabIndex = 11;
             // 
             // totalOutput
             // 
             this.totalOutput.AutoSize = true;
             this.totalOutput.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalOutput.Location = new System.Drawing.Point(223, 406);
+            this.totalOutput.Location = new System.Drawing.Point(297, 500);
+            this.totalOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalOutput.Name = "totalOutput";
-            this.totalOutput.Size = new System.Drawing.Size(0, 26);
+            this.totalOutput.Size = new System.Drawing.Size(0, 32);
             this.totalOutput.TabIndex = 12;
             // 
             // tenderedLabel
             // 
             this.tenderedLabel.AutoSize = true;
             this.tenderedLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenderedLabel.Location = new System.Drawing.Point(12, 471);
+            this.tenderedLabel.Location = new System.Drawing.Point(16, 580);
+            this.tenderedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tenderedLabel.Name = "tenderedLabel";
-            this.tenderedLabel.Size = new System.Drawing.Size(123, 26);
+            this.tenderedLabel.Size = new System.Drawing.Size(153, 32);
             this.tenderedLabel.TabIndex = 13;
             this.tenderedLabel.Text = "TENDERED";
             // 
             // amountInput
             // 
             this.amountInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.amountInput.Location = new System.Drawing.Point(228, 471);
+            this.amountInput.Location = new System.Drawing.Point(304, 580);
+            this.amountInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.amountInput.Multiline = true;
             this.amountInput.Name = "amountInput";
-            this.amountInput.Size = new System.Drawing.Size(162, 26);
+            this.amountInput.Size = new System.Drawing.Size(215, 31);
             this.amountInput.TabIndex = 14;
             this.amountInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -203,9 +217,10 @@
             this.changeButton.FlatAppearance.BorderSize = 2;
             this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeButton.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeButton.Location = new System.Drawing.Point(227, 535);
+            this.changeButton.Location = new System.Drawing.Point(303, 658);
+            this.changeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.changeButton.Name = "changeButton";
-            this.changeButton.Size = new System.Drawing.Size(162, 36);
+            this.changeButton.Size = new System.Drawing.Size(216, 44);
             this.changeButton.TabIndex = 15;
             this.changeButton.Text = "Calculate Change";
             this.changeButton.UseVisualStyleBackColor = true;
@@ -215,9 +230,10 @@
             // 
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeLabel.Location = new System.Drawing.Point(12, 621);
+            this.changeLabel.Location = new System.Drawing.Point(16, 764);
+            this.changeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.changeLabel.Name = "changeLabel";
-            this.changeLabel.Size = new System.Drawing.Size(101, 26);
+            this.changeLabel.Size = new System.Drawing.Size(126, 32);
             this.changeLabel.TabIndex = 16;
             this.changeLabel.Text = "CHANGE";
             // 
@@ -225,18 +241,20 @@
             // 
             this.changeOutput.AutoSize = true;
             this.changeOutput.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeOutput.Location = new System.Drawing.Point(223, 621);
+            this.changeOutput.Location = new System.Drawing.Point(297, 764);
+            this.changeOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.changeOutput.Name = "changeOutput";
-            this.changeOutput.Size = new System.Drawing.Size(0, 26);
+            this.changeOutput.Size = new System.Drawing.Size(0, 32);
             this.changeOutput.TabIndex = 17;
             // 
             // taxLabel
             // 
             this.taxLabel.AutoSize = true;
             this.taxLabel.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxLabel.Location = new System.Drawing.Point(12, 349);
+            this.taxLabel.Location = new System.Drawing.Point(16, 430);
+            this.taxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(52, 26);
+            this.taxLabel.Size = new System.Drawing.Size(64, 32);
             this.taxLabel.TabIndex = 18;
             this.taxLabel.Text = "TAX";
             // 
@@ -244,9 +262,10 @@
             // 
             this.taxOutput.AutoSize = true;
             this.taxOutput.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxOutput.Location = new System.Drawing.Point(223, 349);
+            this.taxOutput.Location = new System.Drawing.Point(297, 430);
+            this.taxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.taxOutput.Name = "taxOutput";
-            this.taxOutput.Size = new System.Drawing.Size(0, 26);
+            this.taxOutput.Size = new System.Drawing.Size(0, 32);
             this.taxOutput.TabIndex = 19;
             // 
             // printReciept
@@ -255,9 +274,10 @@
             this.printReciept.FlatAppearance.BorderSize = 2;
             this.printReciept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printReciept.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printReciept.Location = new System.Drawing.Point(442, 535);
+            this.printReciept.Location = new System.Drawing.Point(589, 658);
+            this.printReciept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.printReciept.Name = "printReciept";
-            this.printReciept.Size = new System.Drawing.Size(162, 36);
+            this.printReciept.Size = new System.Drawing.Size(216, 44);
             this.printReciept.TabIndex = 20;
             this.printReciept.Text = "Print Reciept";
             this.printReciept.UseVisualStyleBackColor = true;
@@ -267,10 +287,9 @@
             // 
             this.reciept.BackColor = System.Drawing.Color.White;
             this.reciept.Font = new System.Drawing.Font("Lucida Console", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciept.Location = new System.Drawing.Point(505, 25);
-            this.reciept.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.reciept.Location = new System.Drawing.Point(673, 31);
             this.reciept.Name = "reciept";
-            this.reciept.Size = new System.Drawing.Size(336, 423);
+            this.reciept.Size = new System.Drawing.Size(448, 521);
             this.reciept.TabIndex = 21;
             this.reciept.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -280,21 +299,21 @@
             this.newOrder.FlatAppearance.BorderSize = 2;
             this.newOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newOrder.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newOrder.Location = new System.Drawing.Point(679, 535);
+            this.newOrder.Location = new System.Drawing.Point(905, 658);
+            this.newOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.newOrder.Name = "newOrder";
-            this.newOrder.Size = new System.Drawing.Size(162, 36);
+            this.newOrder.Size = new System.Drawing.Size(216, 44);
             this.newOrder.TabIndex = 22;
             this.newOrder.Text = "NEW ORDER";
             this.newOrder.UseVisualStyleBackColor = true;
             // 
             // cashRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.ClientSize = new System.Drawing.Size(850, 679);
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1133, 836);
             this.Controls.Add(this.newOrder);
-            this.Controls.Add(this.reciept);
             this.Controls.Add(this.printReciept);
             this.Controls.Add(this.taxOutput);
             this.Controls.Add(this.taxLabel);
@@ -315,7 +334,9 @@
             this.Controls.Add(this.cheesePizza);
             this.Controls.Add(this.pizzaLabel1);
             this.Controls.Add(this.titleLabel);
+            this.Controls.Add(this.reciept);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "cashRegister";
             this.Text = "Joe\'s Pizza Depot             ";
             this.ResumeLayout(false);

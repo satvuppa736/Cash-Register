@@ -56,7 +56,11 @@ namespace Cash_Register
                 cheesePizzaCost = cheese_pizza * CHEESE_PIZZA_COST;
                 caPizzaCost = ca_pizza * CA_PIZZA_COST;
 
-                //Finds 
+                //MATH
+                pepPizzaCost = pep_pizza * PEP_PIZZA_COST;
+                cheesePizzaCost = cheese_pizza * CHEESE_PIZZA_COST;
+                caPizzaCost = ca_pizza * CA_PIZZA_COST;
+
                 subtotal = (pep_pizza * PEP_PIZZA_COST) + (cheese_pizza * CHEESE_PIZZA_COST) + (ca_pizza * CA_PIZZA_COST);
 
                 subtotalOutput.Text = subtotal.ToString("C");
@@ -70,7 +74,7 @@ namespace Cash_Register
 
             }
 
-
+            //Message that shows when an input is not given
             catch
             {
 
@@ -89,6 +93,7 @@ namespace Cash_Register
 
                 changeOutput.Text = change.ToString("C");
 
+                // If statement that displays a message when the money given is less than the amount owed
                 if (tendered < total)
                 {
                     changeOutput.Text = "HEY! PAY UP!";
@@ -111,17 +116,18 @@ namespace Cash_Register
         private void printReciept_Click(object sender, EventArgs e)
         {
             reciept.Visible = true;
+
             Refresh();
 
             //Graphics
-
- 
+            Graphics fg = this.CreateGraphics();
+            Font titlteFont = new Font("Courier Serif", 16, FontStyle.Bold);
+            SolidBrush fontBrush = new SolidBrush(Color.Black);
+            Font normalFont = new Font("Courier Serif", 16);
 
             //Reciept cost
 
-            reciept.Text = "Joe's Pizza Depot";
-            reciept.Text = "\n#" + pep_pizza + "Pepperoni Pizza     " + pepPizzaCost.ToString("C");
-            reciept.Text = "\n#" + pep_pizza + "Peeroni Pizza     " + pepPizzaCost.ToString("C");
+
         }
     }
 }
