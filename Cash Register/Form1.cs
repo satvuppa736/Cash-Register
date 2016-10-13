@@ -27,6 +27,9 @@ namespace Cash_Register
         int ca_pizza;
         double tax;
         double tendered;
+        double pepPizzaCost;
+        double cheesePizzaCost;
+        double caPizzaCost;
 
         public cashRegister()
         {
@@ -49,6 +52,11 @@ namespace Cash_Register
                 cheese_pizza = Convert.ToInt16(cheeseInput.Text);
                 ca_pizza = Convert.ToInt16(canadianInput.Text);
 
+                pepPizzaCost = pep_pizza * PEP_PIZZA_COST;
+                cheesePizzaCost = cheese_pizza * CHEESE_PIZZA_COST;
+                caPizzaCost = ca_pizza * CA_PIZZA_COST;
+
+                //Finds 
                 subtotal = (pep_pizza * PEP_PIZZA_COST) + (cheese_pizza * CHEESE_PIZZA_COST) + (ca_pizza * CA_PIZZA_COST);
 
                 subtotalOutput.Text = subtotal.ToString("C");
@@ -103,8 +111,17 @@ namespace Cash_Register
         private void printReciept_Click(object sender, EventArgs e)
         {
             reciept.Visible = true;
+            Refresh();
+
+            //Graphics
+
+ 
+
+            //Reciept cost
 
             reciept.Text = "Joe's Pizza Depot";
+            reciept.Text = "\n#" + pep_pizza + "Pepperoni Pizza     " + pepPizzaCost.ToString("C");
+            reciept.Text = "\n#" + pep_pizza + "Peeroni Pizza     " + pepPizzaCost.ToString("C");
         }
     }
 }

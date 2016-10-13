@@ -267,10 +267,10 @@
             // 
             this.reciept.BackColor = System.Drawing.Color.White;
             this.reciept.Font = new System.Drawing.Font("Lucida Console", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reciept.Location = new System.Drawing.Point(438, 9);
+            this.reciept.Location = new System.Drawing.Point(505, 25);
             this.reciept.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.reciept.Name = "reciept";
-            this.reciept.Size = new System.Drawing.Size(403, 488);
+            this.reciept.Size = new System.Drawing.Size(336, 423);
             this.reciept.TabIndex = 21;
             this.reciept.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
