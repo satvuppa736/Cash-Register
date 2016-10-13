@@ -105,8 +105,6 @@ namespace Cash_Register
             reciept.Visible = true;
 
             reciept.Text = "Joe's Pizza Depot";
-            reciept.Text = "/";
-
         }
     }
 }
