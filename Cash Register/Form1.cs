@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Cash_Register
 {
@@ -34,9 +35,6 @@ namespace Cash_Register
         public cashRegister()
         {
             InitializeComponent();
-
-            reciept.Visible = false;
-
         }
 
         private void calculateSubtotal_Click(object sender, EventArgs e)
@@ -115,19 +113,20 @@ namespace Cash_Register
 
         private void printReciept_Click(object sender, EventArgs e)
         {
-            reciept.Visible = true;
+            Graphics fg = this.CreateGraphics();
 
-            Refresh();
+            SolidBrush recieptColor = new SolidBrush(Color.White);
+            fg.FillRectangle(recieptColor, 505, 25, 336, 423);
 
             //Graphics
-            Graphics fg = this.CreateGraphics();
-            Font titlteFont = new Font("Courier Serif", 16, FontStyle.Bold);
+            Font titleFont = new Font("Courier New", 16, FontStyle.Underline);
             SolidBrush fontBrush = new SolidBrush(Color.Black);
-            Font normalFont = new Font("Courier Serif", 16);
+            Font normalFont = new Font("Courier New", 16);
 
             //Reciept cost
 
-
+            fg.DrawString("Joe's Pizza Depot", titleFont, fontBrush, 555, 25);
+            fg.DrawString( + "Peperoni Pizza" );
         }
     }
 }
