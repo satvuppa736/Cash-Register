@@ -1,4 +1,7 @@
-﻿using System;
+﻿///Satvir Uppal
+///October 14th 2016
+///Second Summative
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -92,6 +95,7 @@ namespace Cash_Register
                 changeOutput.Text = change.ToString("C");
 
                 // If statement that displays a message when the money given is less than the amount owed
+
                 if (tendered < total)
                 {
                     changeOutput.Text = "HEY! PAY UP!";
@@ -139,6 +143,9 @@ namespace Cash_Register
 
         private void newOrder_Click(object sender, EventArgs e)
         {
+            Graphics fg = this.CreateGraphics();
+
+            //Resets all vaiables to equal 0
             double subtotal = 0;
             double total = 0;
             double cash = 0;
@@ -151,6 +158,21 @@ namespace Cash_Register
             double pepPizzaCos = 0;
             double cheesePizzaCost = 0;
             double caPizzaCost = 0;
+
+            //Resets all labels 
+            pepInput.Text = "";           
+            cheeseInput.Text = "";
+            canadianInput.Text = "";
+            subtotalOutput.Text = "";
+            taxOutput.Text = "";
+            totalOutput.Text = "";
+            amountInput.Text = "";
+            changeOutput.Text = "";
+
+
+            ///I don't know how to dispose of graphics beacuse if fg.Clear is used,
+            ///it writes over the labels. Also have forgotten sound.
+            fg.Dispose(); 
 
         }
     }
