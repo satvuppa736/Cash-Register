@@ -121,12 +121,37 @@ namespace Cash_Register
             //Graphics
             Font titleFont = new Font("Courier New", 16, FontStyle.Underline);
             SolidBrush fontBrush = new SolidBrush(Color.Black);
-            Font normalFont = new Font("Courier New", 16);
+            Font normalFont = new Font("Courier New", 12);
 
             //Reciept cost
 
             fg.DrawString("Joe's Pizza Depot", titleFont, fontBrush, 555, 25);
-            fg.DrawString( + "Peperoni Pizza" );
+            fg.DrawString(pep_pizza + " Peperoni Pizza    " + pepPizzaCost.ToString("C"), normalFont, fontBrush, 505, 50);
+            fg.DrawString(cheese_pizza + " Cheese Pizza      " + cheesePizzaCost.ToString("C"), normalFont, fontBrush, 505, 75);
+            fg.DrawString(ca_pizza + " Canadian Pizza    " + caPizzaCost.ToString("C"), normalFont, fontBrush, 505, 100);
+            fg.DrawString("Subtotal            " + subtotal.ToString("C"), normalFont, fontBrush, 505, 125); 
+            fg.DrawString("Tax @ 13%           " + tax.ToString("C"), normalFont, fontBrush, 505, 150);
+            fg.DrawString("Total               " + total.ToString("C"), normalFont, fontBrush, 505, 175);
+            fg.DrawString("Tendered            " + tendered.ToString("C"), normalFont, fontBrush, 505, 225);
+            fg.DrawString("Change              " + change.ToString("C"), normalFont, fontBrush, 505, 250);
+            fg.DrawString("HAVE A NICE DAY :)",normalFont, fontBrush, 555, 300);
+        }
+
+        private void newOrder_Click(object sender, EventArgs e)
+        {
+            double subtotal = 0;
+            double total = 0;
+            double cash = 0;
+            double change = 0;
+            int pep_pizza = 0;
+            int cheese_pizza = 0;
+            int ca_pizza = 0;
+            double tax = 0;
+            double tendered = 0;
+            double pepPizzaCos = 0;
+            double cheesePizzaCost = 0;
+            double caPizzaCost = 0;
+
         }
     }
 }

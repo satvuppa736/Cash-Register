@@ -274,6 +274,7 @@
             this.newOrder.TabIndex = 22;
             this.newOrder.Text = "NEW ORDER";
             this.newOrder.UseVisualStyleBackColor = true;
+            this.newOrder.Click += new System.EventHandler(this.newOrder_Click);
             // 
             // cashRegister
             // 
