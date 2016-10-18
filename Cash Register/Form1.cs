@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace Cash_Register
 {
@@ -24,7 +25,6 @@ namespace Cash_Register
         const double TAX = 1.13;
         double subtotal;
         double total;
-        double cash;
         double change;
         int pep_pizza;
         int cheese_pizza;
@@ -45,8 +45,6 @@ namespace Cash_Register
 
             try
             {
-
-
                 //Converts the text input into a number value and places it into a variable
 
                 pep_pizza = Convert.ToInt16(pepInput.Text);
@@ -71,20 +69,15 @@ namespace Cash_Register
 
                 tax = total - subtotal;
                 taxOutput.Text = tax.ToString("C");
-
-
             }
 
             //Message that shows when an input is not given
             catch
-            {
-
+            {    
                 subtotalOutput.Text = "If you dont want a pizza, enter the value as '0'";
-            }
-                 
+            }      
         }
-
-
+        
         private void changeButton_Click(object sender, EventArgs e)
         {
             try
@@ -99,26 +92,22 @@ namespace Cash_Register
                 if (tendered < total)
                 {
                     changeOutput.Text = "HEY! PAY UP!";
-
                 }
 
             }
 
             catch
             {
-
+                //Statement that shows when no amount is entered
                 changeOutput.Text = "Hey Buddy, you think im running this for free?!";
-
             }
-
-
-
         }
 
         private void printReciept_Click(object sender, EventArgs e)
         {
             Graphics fg = this.CreateGraphics();
 
+            //Sets up brushes
             SolidBrush recieptColor = new SolidBrush(Color.White);
             fg.FillRectangle(recieptColor, 505, 25, 336, 423);
 
@@ -127,23 +116,34 @@ namespace Cash_Register
             SolidBrush fontBrush = new SolidBrush(Color.Black);
             Font normalFont = new Font("Courier New", 12);
 
-            //Reciept cost
-
+            //Reciept Printing
             fg.DrawString("Joe's Pizza Depot", titleFont, fontBrush, 555, 25);
+            Thread.Sleep(400);
             fg.DrawString(pep_pizza + " Peperoni Pizza    " + pepPizzaCost.ToString("C"), normalFont, fontBrush, 505, 50);
+            Thread.Sleep(400);
             fg.DrawString(cheese_pizza + " Cheese Pizza      " + cheesePizzaCost.ToString("C"), normalFont, fontBrush, 505, 75);
+            Thread.Sleep(400);
             fg.DrawString(ca_pizza + " Canadian Pizza    " + caPizzaCost.ToString("C"), normalFont, fontBrush, 505, 100);
-            fg.DrawString("Subtotal            " + subtotal.ToString("C"), normalFont, fontBrush, 505, 125); 
+            Thread.Sleep(400);
+            fg.DrawString("Subtotal            " + subtotal.ToString("C"), normalFont, fontBrush, 505, 125);
+            Thread.Sleep(400);
             fg.DrawString("Tax @ 13%           " + tax.ToString("C"), normalFont, fontBrush, 505, 150);
+            Thread.Sleep(400);
             fg.DrawString("Total               " + total.ToString("C"), normalFont, fontBrush, 505, 175);
+            Thread.Sleep(400);
             fg.DrawString("Tendered            " + tendered.ToString("C"), normalFont, fontBrush, 505, 225);
+            Thread.Sleep(400);
             fg.DrawString("Change              " + change.ToString("C"), normalFont, fontBrush, 505, 250);
+            Thread.Sleep(400);
             fg.DrawString("HAVE A NICE DAY :)",normalFont, fontBrush, 555, 300);
         }
 
         private void newOrder_Click(object sender, EventArgs e)
         {
             Graphics fg = this.CreateGraphics();
+
+            SoundPlayer ching = new SoundPlayer(Properties.Resources.chaChing);
+            ching.Play();
 
             //Resets all vaiables to equal 0
             double subtotal = 0;
@@ -168,11 +168,9 @@ namespace Cash_Register
             totalOutput.Text = "";
             amountInput.Text = "";
             changeOutput.Text = "";
-
-
-            ///I don't know how to dispose of graphics beacuse if fg.Clear is used,
-            ///it writes over the labels. Also have forgotten sound.
-            fg.Dispose(); 
+            
+            //Clears Screen
+            fg.Clear(Color.RoyalBlue); 
 
         }
     }
